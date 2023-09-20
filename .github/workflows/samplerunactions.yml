@@ -1,18 +1,18 @@
 name: sample-run-actions
-run-name: ${{ github.actor }} is learning GitHub Actions
+run-name: ${{ github.actor }} is learning GitHub Actions on running the tesr
 on: [push]
 jobs:
-  check-bats-version:
+  test-bash-23:
+    runs-on:
+    steps:
+      - run: echo "Hello TestBash!"
+
+  run-unit-tests:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
-          node-version: '14'
-      - run: echo "Hello TestBash!"
-      - run: npm install -g bats
-      - run: bats -v
-      - run: ls
-      - run: cd ./src/webapp
-      - run: npm install 
-      - run: npm run start-server
+          node-version: '18'
+
+      - run: cd ./src/webapp/api && npm ci && npm run test

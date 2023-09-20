@@ -11,7 +11,6 @@ jobs:
           node-version: '14'
       - run: npm install -g bats
       - run: echo "Hello TestBash!"
-      - run: ls
-      - run: cd src/webapp
+      - run: cd ./src/webapp
       - run: ls
 
