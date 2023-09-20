@@ -9,9 +9,10 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '14'
-      - run: npm install -g bats
       - run: echo "Hello TestBash!"
+      - run: npm install -g bats
+      - run: bats -v
       - run: ls
       - run: cd src/webapp
-      - run: ls
-
+      - run: npm install 
+      - run: npm run start-server
