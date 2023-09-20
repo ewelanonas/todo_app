@@ -1,9 +1,9 @@
 name: sample-run-actions
-run-name: ${{ github.actor }} is learning GitHub Actions on running the tesr
+run-name: ${{ github.actor }} is learning GitHub Actions on running the test
 on: [push]
 jobs:
   test-bash-23:
-    runs-on:
+    runs-on: ubuntu-latest
     steps:
       - run: echo "Hello TestBash!"
 
