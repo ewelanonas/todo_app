@@ -1,4 +1,4 @@
-name: learn-github-actions
+name: sample-run-actions
 run-name: ${{ github.actor }} is learning GitHub Actions
 on: [push]
 jobs:
@@ -13,6 +13,6 @@ jobs:
       - run: npm install -g bats
       - run: bats -v
       - run: ls
-      - run: cd src/webapp
+      - run: cd ./src/webapp
       - run: npm install 
       - run: npm run start-server
