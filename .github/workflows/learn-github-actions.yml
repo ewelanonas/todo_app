@@ -12,3 +12,7 @@ jobs:
       - run: echo "Hello TestBash!"
       - run: npm install -g bats
       - run: bats -v
+      - run: ls
+      - run: cd src/webapp
+      - run: npm install 
+      - run: npm run start-server
